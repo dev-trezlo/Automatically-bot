@@ -1,0 +1,22 @@
+{
+  "name": "Automatically Telegram Bot",
+  "description": "A simple Telegram bot that can create private deal groups and respond to commands.",
+  "repository": "https://github.com/GolgiBody1/Automatically-bot",
+  "keywords": ["telegram", "bot", "python", "railway", "heroku"],
+  "buildpacks": [
+    { "url": "heroku/python" }
+  ],
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Your Telegram Bot Token from @BotFather",
+      "required": true
+    },
+    "LOG_CHANNEL_ID": {
+      "description": "Your Telegram Log Channel ID (example: -100xxxxxxxxxx)",
+      "required": true
+    }
+  },
+  "scripts": {
+    "postdeploy": "echo 'Bot deployed successfully!'"
+  }
+}
