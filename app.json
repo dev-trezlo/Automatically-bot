@@ -1,8 +1,8 @@
 {
-  "name": "Automatically Telegram Bot",
-  "description": "A simple Telegram bot that can create private deal groups and respond to commands.",
+  "name": "Automatically Telegram Escrow Bot",
+  "description": "A Telegram Escrow Bot + Pyrogram Userbot that auto-creates private escrow groups.",
   "repository": "https://github.com/GolgiBody1/Automatically-bot",
-  "keywords": ["telegram", "bot", "python", "railway", "heroku"],
+  "keywords": ["telegram", "bot", "pyrogram", "escrow", "python", "railway", "heroku"],
   "buildpacks": [
     { "url": "heroku/python" }
   ],
@@ -11,12 +11,20 @@
       "description": "Your Telegram Bot Token from @BotFather",
       "required": true
     },
-    "LOG_CHANNEL_ID": {
-      "description": "Your Telegram Log Channel ID (example: -100xxxxxxxxxx)",
+    "API_ID": {
+      "description": "Your Telegram API ID from https://my.telegram.org/apps",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Your Telegram API Hash from https://my.telegram.org/apps",
+      "required": true
+    },
+    "SESSION": {
+      "description": "Your Pyrogram string session (to run the userbot)",
       "required": true
     }
   },
   "scripts": {
-    "postdeploy": "echo 'Bot deployed successfully!'"
+    "postdeploy": "echo 'Escrow Bot deployed successfully!'"
   }
 }
