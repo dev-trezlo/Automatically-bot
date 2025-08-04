@@ -1,1 +1,1 @@
-worker: python escrow_bot.py
+worker: python bot.py
